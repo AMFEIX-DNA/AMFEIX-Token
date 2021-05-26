@@ -130,12 +130,12 @@ Initial ratio  100000 AMF : 1 BTC  (1 AMF : 1000 sat).
 We need this value to compute the amount of AMF to send to users when they deposited BTC at  
 AMFEIX and to compute the amount of BTC to send to users when they claim back their BTC.  
 ```
-function getBtcToAmfRatio() public view virtual returns (uint256)
+function getSwapRatio() public view virtual returns (uint256)
 ```
 
 Allows contract owner to update the current swap ratio (AMF/BTC) to `newRatio`.  
 ```
-function setBtcToAmfRatio(uint256 newRatio) external virtual onlyOwner returns (bool)
+function setSwapRatio(uint256 newRatio) external virtual onlyOwner returns (bool)
 ```
 
 Allows contract owner to notify the network that a `userEthAddress` who deposited BTC at  
@@ -156,14 +156,4 @@ function claimBTC(uint256 tokenAmount, string memory userBtcAddress) public virt
 ```
 ```
 event BtcToBePaid (address indexed customer, string userBtcAddress, uint256 sentToken)
-```
-
-Allows contract owner to notify the network that a `customer` who were claiming in the specific  
-`ethTxId` has been funded with the corresponding `btcAmount`.  
-Emits a {PaidBTC} event.
-```
-function btcDelivery(bytes32 ethTxId, address customer, uint256 btcAmount) public virtual onlyOwner returns (bool)
-```
-```
-event PaidBTC (bytes32 indexed ethTxId, address customer, uint256 btcAmount, uint256 btcToAmfRatio)
 ```
