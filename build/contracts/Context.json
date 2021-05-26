@@ -1,7 +1,7 @@
 {
   "contractName": "Context",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/kaio/amfeix-solidity/node_modules/@openzeppelin/contracts/utils/Context.sol\":\"Context\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kaio/amfeix-solidity/node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x49bb39c5e945727f7d263cf1c5d8fcebbee3f4ca16f33ec61b1f2db20ffa22bd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0f6d1af35d9b34140ad4e3bb8c62af4ae57196fe284901b232a09f3a22c51c04\",\"dweb:/ipfs/QmekwWtJ1ZXJw8L7Z1a8iP2nP7BLGhSGk2qnfL4dzsFknv\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/kaio/AMFEIX-Token/node_modules/@openzeppelin/contracts/utils/Context.sol\":\"Context\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kaio/AMFEIX-Token/node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x49bb39c5e945727f7d263cf1c5d8fcebbee3f4ca16f33ec61b1f2db20ffa22bd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0f6d1af35d9b34140ad4e3bb8c62af4ae57196fe284901b232a09f3a22c51c04\",\"dweb:/ipfs/QmekwWtJ1ZXJw8L7Z1a8iP2nP7BLGhSGk2qnfL4dzsFknv\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -10,9 +10,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n/*\n * @dev Provides information about the current execution context, including the\n * sender of the transaction and its data. While these are generally available\n * via msg.sender and msg.data, they should not be accessed in such a direct\n * manner, since when dealing with meta-transactions the account sending and\n * paying for execution may not be the actual sender (as far as an application\n * is concerned).\n *\n * This contract is only required for intermediate, library-like contracts.\n */\nabstract contract Context {\n    function _msgSender() internal view virtual returns (address payable) {\n        return payable(msg.sender);\n    }\n\n    function _msgData() internal view virtual returns (bytes calldata) {\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\n        return msg.data;\n    }\n}\n",
-  "sourcePath": "/home/kaio/amfeix-solidity/node_modules/@openzeppelin/contracts/utils/Context.sol",
+  "sourcePath": "/home/kaio/AMFEIX-Token/node_modules/@openzeppelin/contracts/utils/Context.sol",
   "ast": {
-    "absolutePath": "/home/kaio/amfeix-solidity/node_modules/@openzeppelin/contracts/utils/Context.sol",
+    "absolutePath": "/home/kaio/AMFEIX-Token/node_modules/@openzeppelin/contracts/utils/Context.sol",
     "exportedSymbols": {
       "Context": [
         1259
@@ -299,7 +299,7 @@
     "src": "33:907:8"
   },
   "legacyAST": {
-    "absolutePath": "/home/kaio/amfeix-solidity/node_modules/@openzeppelin/contracts/utils/Context.sol",
+    "absolutePath": "/home/kaio/AMFEIX-Token/node_modules/@openzeppelin/contracts/utils/Context.sol",
     "exportedSymbols": {
       "Context": [
         1259
@@ -591,7 +591,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-05-26T09:40:10.174Z",
+  "updatedAt": "2021-05-26T11:55:13.869Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

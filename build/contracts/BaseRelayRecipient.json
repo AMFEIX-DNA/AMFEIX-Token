@@ -47,7 +47,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"}],\"name\":\"isTrustedForwarder\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"trustedForwarder\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"versionRecipient\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isTrustedForwarder(address)\":{\"notice\":\"return if the forwarder is trusted to forward relayed transactions to us. the forwarder is required to verify the sender's signature, and verify the call is not a replay.\"}},\"notice\":\"A base contract to be inherited by any contract that want to receive relayed transactions A subclass must use \\\"_msgSender()\\\" instead of \\\"msg.sender\\\"\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol\":\"BaseRelayRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol\":{\"keccak256\":\"0xa994b1bd59233901e49c7ad31c64f7fb29a8c30f44ada12d4839128d443fe4ec\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://11eed87cd15d0813b1b3abedb5d0c03c2f284f7f2374bb4a99bc71a21b659591\",\"dweb:/ipfs/QmXZyUfzMfLxgRc1rGzePVJoHXU9ouU5HWcJUyEtkPx5Kj\"]},\"/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/interfaces/IRelayRecipient.sol\":{\"keccak256\":\"0x6243d3a925653ed0bde57e9fae7fb87f12c58a2376b27ae23b53502322532e00\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://928801ac8ceac377f326cd48de8e0056db9a7f8767b60efee5dfca035f326702\",\"dweb:/ipfs/QmYFkKXZcSVmmLNpDF1hvsLwAnhjmVSZuvEueaJgp1aVSg\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"forwarder\",\"type\":\"address\"}],\"name\":\"isTrustedForwarder\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"trustedForwarder\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"versionRecipient\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isTrustedForwarder(address)\":{\"notice\":\"return if the forwarder is trusted to forward relayed transactions to us. the forwarder is required to verify the sender's signature, and verify the call is not a replay.\"}},\"notice\":\"A base contract to be inherited by any contract that want to receive relayed transactions A subclass must use \\\"_msgSender()\\\" instead of \\\"msg.sender\\\"\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol\":\"BaseRelayRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol\":{\"keccak256\":\"0xa994b1bd59233901e49c7ad31c64f7fb29a8c30f44ada12d4839128d443fe4ec\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://11eed87cd15d0813b1b3abedb5d0c03c2f284f7f2374bb4a99bc71a21b659591\",\"dweb:/ipfs/QmXZyUfzMfLxgRc1rGzePVJoHXU9ouU5HWcJUyEtkPx5Kj\"]},\"/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/interfaces/IRelayRecipient.sol\":{\"keccak256\":\"0x6243d3a925653ed0bde57e9fae7fb87f12c58a2376b27ae23b53502322532e00\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://928801ac8ceac377f326cd48de8e0056db9a7f8767b60efee5dfca035f326702\",\"dweb:/ipfs/QmYFkKXZcSVmmLNpDF1hvsLwAnhjmVSZuvEueaJgp1aVSg\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -56,9 +56,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: GPL-3.0-only\n// solhint-disable no-inline-assembly\npragma solidity >=0.7.6;\n\nimport \"./interfaces/IRelayRecipient.sol\";\n\n/**\n * A base contract to be inherited by any contract that want to receive relayed transactions\n * A subclass must use \"_msgSender()\" instead of \"msg.sender\"\n */\nabstract contract BaseRelayRecipient is IRelayRecipient {\n\n    /*\n     * Forwarder singleton we accept calls from\n     */\n    address public trustedForwarder;\n\n    function isTrustedForwarder(address forwarder) public override view returns(bool) {\n        return forwarder == trustedForwarder;\n    }\n\n    /**\n     * return the sender of this call.\n     * if the call came through our trusted forwarder, return the original sender.\n     * otherwise, return `msg.sender`.\n     * should be used in the contract anywhere instead of msg.sender\n     */\n    function _msgSender() internal override virtual view returns (address payable ret) {\n        if (msg.data.length >= 20 && isTrustedForwarder(msg.sender)) {\n            // At this point we know that the sender is a trusted forwarder,\n            // so we trust that the last bytes of msg.data are the verified sender address.\n            // extract sender address from the end of msg.data\n            assembly {\n                ret := shr(96,calldataload(sub(calldatasize(),20)))\n            }\n        } else {\n            return payable(msg.sender);\n        }\n    }\n\n    /**\n     * return the msg.data of this call.\n     * if the call came through our trusted forwarder, then the real sender was appended as the last 20 bytes\n     * of the msg.data - so this method will strip those 20 bytes off.\n     * otherwise, return `msg.data`\n     * should be used in the contract instead of msg.data, where the difference matters (e.g. when explicitly\n     * signing or hashing the\n     */\n    function _msgData() internal override virtual view returns (bytes memory ret) {\n        if (msg.data.length >= 20 && isTrustedForwarder(msg.sender)) {\n            return msg.data[0:msg.data.length-20];\n        } else {\n            return msg.data;\n        }\n    }\n}\n",
-  "sourcePath": "/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol",
+  "sourcePath": "/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol",
   "ast": {
-    "absolutePath": "/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol",
+    "absolutePath": "/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol",
     "exportedSymbols": {
       "BaseRelayRecipient": [
         484
@@ -83,7 +83,7 @@
         "src": "79:24:2"
       },
       {
-        "absolutePath": "/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/interfaces/IRelayRecipient.sol",
+        "absolutePath": "/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/interfaces/IRelayRecipient.sol",
         "file": "./interfaces/IRelayRecipient.sol",
         "id": 403,
         "nodeType": "ImportDirective",
@@ -1141,7 +1141,7 @@
     "src": "79:2035:2"
   },
   "legacyAST": {
-    "absolutePath": "/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol",
+    "absolutePath": "/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/BaseRelayRecipient.sol",
     "exportedSymbols": {
       "BaseRelayRecipient": [
         484
@@ -1166,7 +1166,7 @@
         "src": "79:24:2"
       },
       {
-        "absolutePath": "/home/kaio/amfeix-solidity/node_modules/@opengsn/contracts/src/interfaces/IRelayRecipient.sol",
+        "absolutePath": "/home/kaio/AMFEIX-Token/node_modules/@opengsn/contracts/src/interfaces/IRelayRecipient.sol",
         "file": "./interfaces/IRelayRecipient.sol",
         "id": 403,
         "nodeType": "ImportDirective",
@@ -2229,7 +2229,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-05-26T09:40:10.105Z",
+  "updatedAt": "2021-05-26T11:55:13.813Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
