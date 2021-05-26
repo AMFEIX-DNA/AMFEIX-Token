@@ -1,5 +1,9 @@
-AMFeix Solidity
+AMFEIX Solidity
 =================================================
+
+## Contract address on Ethereum mainnet 
+0xeeA128Fc13004e7c48EDA8bebD35a393bB7dcc3A  
+https://etherscan.io/token/0xeea128fc13004e7c48eda8bebd35a393bb7dcc3a
 
 
 ## Testing
