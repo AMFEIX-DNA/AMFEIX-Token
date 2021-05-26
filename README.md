@@ -3,7 +3,7 @@ AMFEIX Solidity
 
 ## Contract address on Ethereum mainnet 
 0x7Bc2B0367DC5b18aA126b68ee4352A5E5044506e  
-https://etherscan.io/address/0x7Bc2B0367DC5b18aA126b68ee4352A5E5044506e
+https://etherscan.io/token/0x7Bc2B0367DC5b18aA126b68ee4352A5E5044506e
 
 
 ## Testing
